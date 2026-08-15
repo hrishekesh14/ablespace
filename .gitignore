@@ -1,0 +1,35 @@
+﻿# Dependencies
+node_modules/
+**/node_modules/
+
+# Next.js build output
+.next/
+**/.next/
+out/
+
+# NestJS build output
+dist/
+**/dist/
+
+# Environment files
+.env
+.env.local
+.env*.local
+**/.env
+**/.env.local
+
+# SQLite database
+*.sqlite
+**/data/*.sqlite
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+!.vscode/extensions.json

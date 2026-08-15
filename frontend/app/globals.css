@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: #ffffff;
+  --surface-subtle: #f7f7f8;
+  --surface-raised: #ffffff;
+  --border: #e5e5e8;
+  --border-subtle: #eeeeef;
+  --ink: #18181b;
+  --ink-muted: #6b7280;
+  --ink-faint: #a1a1aa;
+
+  --accent: #3b82f6;
+  --accent-fg: #ffffff;
+  --accent-soft: #eff6ff;
+}
+
+:root[data-accent="amber"] {
+  --accent: #f59e0b;
+  --accent-soft: #fffbeb;
+}
+:root[data-accent="blue"] {
+  --accent: #3b82f6;
+  --accent-soft: #eff6ff;
+}
+:root[data-accent="pink"] {
+  --accent: #ec4899;
+  --accent-soft: #fdf2f8;
+}
+:root[data-accent="rose"] {
+  --accent: #f43f5e;
+  --accent-soft: #fff1f2;
+}
+:root[data-accent="emerald"] {
+  --accent: #10b981;
+  --accent-soft: #ecfdf5;
+}
+:root[data-accent="black"] {
+  --accent: #18181b;
+  --accent-soft: #f4f4f5;
+}
+
+.dark {
+  --surface: #17181b;
+  --surface-subtle: #1e1f23;
+  --surface-raised: #232427;
+  --border: #2d2e33;
+  --border-subtle: #26272b;
+  --ink: #f4f4f5;
+  --ink-muted: #a1a1aa;
+  --ink-faint: #6b7280;
+  --accent-soft: #232427;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--surface-subtle);
+  color: var(--ink);
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--accent-fg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 999px;
+}
+
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fade-slide-in 0.12s ease-out;
+}
