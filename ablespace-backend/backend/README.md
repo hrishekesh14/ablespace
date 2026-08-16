@@ -4,6 +4,11 @@ REST API for the AbleSpace task management assessment. Built to match the
 frontend's `lib/api/*.ts` service layer exactly — same field names, same
 resource shapes — so pointing the frontend at this backend is a one-line
 env change, not a rewrite.
+## Live Deployment
+
+- **API base URL:** `https://ablespace-production.up.railway.app/api`
+- **Health check:** `https://ablespace-production.up.railway.app/api/health`
+- **Frontend consuming this API:** `https://ablespace-eight.vercel.app`
 
 ## Tech stack
 
@@ -15,6 +20,7 @@ env change, not a rewrite.
   assessment reviewers will actually try to run.
 - **class-validator** / **class-transformer** for request validation
 - **@nestjs/jwt** for guest/Google login sessions
+
 
 ## Endpoints
 
